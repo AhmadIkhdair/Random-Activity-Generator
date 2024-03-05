@@ -1,0 +1,133 @@
+/* ------------ */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  height: 100%;
+}
+:root {
+  --background-color: #FEECE2;
+  --main-color: #FFBE98;
+  --text-color: #ffffff;
+  --accent-color: #c0a299;
+}
+/* ------------ */
+body {
+  font-family: monospace;
+  height: 100%;
+  background-color: var(--background-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+h1 {
+  width: 100%;
+  margin-bottom: 40px;
+  color: var(--text-color);
+  text-align: center;
+}
+/* ------------ */
+.container {
+  height: 100%;
+  width: 100%;
+  max-width: 570px;
+  max-height: 500px;
+  margin: 0 auto;
+  padding: 60px;
+
+  background-color: var(--main-color);
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* ------------ */
+.form {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 80px;
+  grid-column-gap: 10px;
+}
+.form-submit {
+  outline: none;
+  border: none;
+  background-color: var(--accent-color);
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: monospace;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 36px;
+  color: var(--text-color);
+}
+.form-submit:hover {
+  box-shadow: 0 0px 5px rgb(255, 255, 255);
+  background-color: var(--background-color);
+  color: rgb(139, 92, 48);
+}
+.form-select {
+  background-color: var(--accent-color);
+  border: none;
+  color: var(--text-color);
+  border-radius: 5px;
+}
+.form-select:hover {
+  cursor: pointer;
+}
+.form-select option {
+  background-color: var(--background-color);
+  color: black;
+}
+.cards {
+  display: flex;
+  margin: 20px 0;
+  width: 100%;
+}
+.card-item {
+  width: 100%;
+  padding: 5px 20px 20px;
+  border: 1px solid rgb(232, 232, 232);
+  background-color: var(--accent-color);
+  color: var(--text-color);
+  border-radius: 5px;
+}
+.card-info {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+.card-activity {
+  line-height: 1.2;
+  margin-top: 10px;
+}
+.tag-error {
+  width: 100%;
+  text-align: center;
+  color: var(--text-color);
+}
+/* ------------ */
+.is-element-hidden {
+  display: none;
+}
+/* ------------ */
+@media (max-width: 620px) {
+  .container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 60px 20px;
+  }
+  .form {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+}
